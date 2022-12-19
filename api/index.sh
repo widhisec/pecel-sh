@@ -5,6 +5,7 @@ http_response_header "Content-Type" "text/html; charset=utf8"
      local _username=$(curl -sk "$1")
      local _okey=$(echo -e $_username|grep -Po '(?<=username":")[^"]*')
      echo "${_okey}"
+     querystring "$_okey" | querystring_unescape | string_upper
 cat << 'EOF'
 <!DOCTYPE html>
 <html>
