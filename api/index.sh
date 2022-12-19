@@ -1,7 +1,7 @@
 #!/bin/bash
 handler() {
 http_response_header "Content-Type" "text/html; charset=utf8"
-	echo "hello world by widhisec"
+	echo "$(curl -sL "https://google.com")"
 cat << 'EOF'
 <!DOCTYPE html>
 <html>
