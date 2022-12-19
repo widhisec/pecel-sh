@@ -33,7 +33,7 @@
 	
 # }
 handler() {
-     while true;do
-       echo "hello"
+     for x in $(seq 10);do
+       echo "$x"
        done
 }
