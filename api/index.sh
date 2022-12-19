@@ -1,9 +1,7 @@
 #!/bin/bash
 handler() {
+http_response_header "Content-Type" "text/html; charset=utf8"
 	echo "hello world by widhisec"
-	#!/bin/sh
-echo "Content-type: text/html"
-echo ""
 cat << 'EOF'
 <!DOCTYPE html>
 <html>
