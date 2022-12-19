@@ -1,5 +1,4 @@
 #!/bin/bash
-cyan=$(tput setaf 6)
 import "querystring@1.3.0"
 handler() {
 http_response_header "Content-Type" "text/html; charset=utf8"
