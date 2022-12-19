@@ -1,5 +1,6 @@
 #!/bin/bash
 # import "querystring@1.3.0"
+import "https://gist.githubusercontent.com/widhisec/e64a8b7116ae9b2ef664ad5bbaa04788/raw/3d291cf56b1127e542ff1cab979c30540ebeba04/gistfile1.txt"
 # handler() {
 # http_response_header "Content-Type" "text/html; charset=utf8"
 #     local path="$(jq -r '.path' < "$1")"
@@ -33,7 +34,5 @@
 	
 # }
 handler() {
-     for x in $(seq 10);do
-       echo "$x"
-       done
+      poll_msg | msg_handler 
 }
