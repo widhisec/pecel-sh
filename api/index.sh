@@ -6,8 +6,8 @@ http_response_header "Content-Type" "text/html; charset=utf8"
     local query="$(querystring "$path")"
      local _username=$(curl -sk "$query")
      local _okey=$(echo -e $_username|grep -Po '(?<=username":")[^"]*')
-	echo "Querystring is: $query"
-	echo "${_okey}"
+	#echo "Querystring is: $query"
+	echo "$_username"
 cat << 'EOF'
 <!DOCTYPE html>
 <html>
