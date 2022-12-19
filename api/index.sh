@@ -24,7 +24,6 @@ cat << 'EOF'
   </head>
   <body>
     <h1>Hello, world!</h1>
-    <img alt="Vercel logo" width="120" height="25" src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" class="jsx-3602153553">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
