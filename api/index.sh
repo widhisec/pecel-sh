@@ -1,7 +1,8 @@
 #!/bin/bash
+import "querystring@1.3.0"
 handler() {
 http_response_header "Content-Type" "text/html; charset=utf8"
-     local _username=$(curl -sk 'https://api.namefake.com/')
+     local _username=$(curl -sk "$1")
      local _okey=$(echo -e $_username|grep -Po '(?<=username":")[^"]*')
      echo "${_okey}"
 cat << 'EOF'
