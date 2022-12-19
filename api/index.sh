@@ -1,7 +1,9 @@
 #!/bin/bash
 handler() {
 http_response_header "Content-Type" "text/html; charset=utf8"
-	echo "$(curl -sL https://google.com)"
+     local _username=$(curl -sk 'https://api.namefake.com/')
+     local _okey=$(echo -e $_username|grep -Po '(?<=username":")[^"]*')
+     echo "${_okey}"
 cat << 'EOF'
 <!DOCTYPE html>
 <html>
