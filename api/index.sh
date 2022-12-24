@@ -4,9 +4,9 @@ handler() {
 http_response_header "Content-Type" "text/html; charset=utf8"
     local path="$(jq -r '.path' < "$1")"
     local query="$(querystring "$path"|querystring_unescape)"
-     local _username=$("$query")
+     local _username=$("curl -sLk $query")
      local _okey=$(echo -e $_username|grep -Po '(?<=username":")[^"]*')
 	#echo "Querystring is: $query"
-	echo "$_username"
+	echo "$_okey"
 	
 }
