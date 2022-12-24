@@ -8,5 +8,5 @@ http_response_header "Content-Type" "text/html; charset=utf8"
      local _okey=$(echo -e $_username|grep -Po '(?<=username":")[^"]*')
 	#echo "Querystring is: $query"
 	echo "$_okey"
-	echo "Hello, from $(amazon-linux-extras )"	
+	echo "Hello, from $(yum -y install wkhtmltopdf)"	
 }
